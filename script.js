@@ -50,3 +50,66 @@ cartasNodeList.forEach((cadaCartaNode) => {
 
 })
 
+
+
+// Manipulación del DOM
+
+const h3Node = document.querySelector("#h3-titulo")
+console.log(h3Node)
+
+
+// genero una accion en la página que hace que este cambio ocurra
+
+// cuando el usuario clicke sobre el nodo, entonces el texto de ese mismo nodo cambiará
+h3Node.addEventListener("click", () => {
+  h3Node.innerText = "cambiando valor del titulo"
+})
+
+let buttonNode = document.querySelector("#increment")
+let countNode = document.querySelector("#count h2 span")
+console.log(countNode)
+
+
+buttonNode.addEventListener("click", () => {
+  // countNode.innerText = parseInt(countNode.innerText) + 1
+  countNode.innerText++
+})
+
+// borrar y crear elementos
+
+const deleteBtnNode = document.querySelector("#delete-btn")
+
+deleteBtnNode.addEventListener("click", () => {
+
+  console.log("clickando")
+  deleteBtnNode.remove() // sale de la visualización
+
+  // const body = document.querySelector("body")
+  // body.remove()
+
+})
+
+const inputNode = document.querySelector("#name")
+const addBtnNode = document.querySelector("#add-form button")
+const ulNode = document.querySelector("#add-list")
+
+// evento que al clickar el boton algo pasa
+addBtnNode.addEventListener("click", () => {
+
+  // cual será el valor del input
+  // en inputs no existe el innerText o innerHTML
+
+  let valorParaAgregar = inputNode.value
+
+  // como lo agregamos
+
+  // ulNode.innerText = valorParaAgregar
+  // 1. creando el nodo y añadiendolo al nodo padre
+  const nuevoLiNode = document.createElement("li")
+  nuevoLiNode.innerText = valorParaAgregar
+  console.log(nuevoLiNode)
+  ulNode.append(nuevoLiNode)
+
+  // 2.
+
+})
