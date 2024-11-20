@@ -105,11 +105,48 @@ addBtnNode.addEventListener("click", () => {
 
   // ulNode.innerText = valorParaAgregar
   // 1. creando el nodo y añadiendolo al nodo padre
-  const nuevoLiNode = document.createElement("li")
-  nuevoLiNode.innerText = valorParaAgregar
-  console.log(nuevoLiNode)
-  ulNode.append(nuevoLiNode)
+  // const nuevoLiNode = document.createElement("li")
+  // nuevoLiNode.innerText = valorParaAgregar
+  // console.log(nuevoLiNode)
+  // ulNode.append(nuevoLiNode) // añade un nodo a otro
 
   // 2.
+  ulNode.innerHTML += `<li>${valorParaAgregar}</li>`
+
+})
+
+
+const sectionNode = document.querySelector("#final-section")
+console.log(sectionNode)
+
+sectionNode.addEventListener("click", () => {
+
+  // sectionNode.className = "container green-container"
+
+  // classList
+
+  // sectionNode.classList.add("green-container") // añade una nueva clase
+  // sectionNode.classList.remove("blue-container") // añade una nueva clase
+
+  sectionNode.classList.toggle("blue-container") // remueve la clase si existia y añadela si no existia
+  sectionNode.classList.toggle("green-container")
+
+})
+
+
+const stylesBtnNode = document.querySelector("#styles-btn")
+const eventTitleNode = document.querySelector("#event-title")
+
+stylesBtnNode.addEventListener("click", () => {
+
+  // eventTitleNode.innerText = "Cambiando texto"
+
+  // console.log(eventTitleNode.style)
+  eventTitleNode.style.color = "blue"
+  eventTitleNode.style.backgroundColor = "red"
+  eventTitleNode.style.margin = "20px"
+  eventTitleNode.style.padding = "30px"
+  eventTitleNode.style.border = "solid 2px black"
+  eventTitleNode.style.borderRadius = "10px"
 
 })
